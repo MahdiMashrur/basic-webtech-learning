@@ -1,0 +1,23 @@
+1) git init <directory>
+Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository
+
+2) git add <directory>
+Stage all changes in <directory> for the next commit. Replace <directory> with a <file> to change a specific file
+
+3) .gitignore basics:
+    a)literal filenames(eg: ".DS_Store", This will ignore any files named .DS_Store, which is a common file on macOS.)
+    b) * is used as a wildcard match(eg: *.log matches any file ending with the .log extension.)
+    c)   You can ignore entire directories, just by including their paths and putting a / on the end. (eg: node_modules/ or logs/)
+    d)# is used to add comments to a .gitignore file
+    e) if you have already a file that you committed, then for ignoring forst you have to unstage it,
+    ( git rm --cached FILENAME) commit it as deleted 
+4) git commit -m "<message>"
+    Commit the staged snapshot, but instead of launching a text editor, use <message> as the commit message.
+
+5) git status 
+    List which files are staged, unstaged, and untracked.
+6) git remote add <name> <url>
+    Create a new connection to a remote repo. After adding a remote, you can use <name> as a shortcut for <url> in other commands.
+7) git push <remote> <branch>
+    Push the current local branch to <remote>(name of the repo) and branch <branch>, along with necessary commits and
+    objects. Creates named branch in the remote repo if it doesn’t exist

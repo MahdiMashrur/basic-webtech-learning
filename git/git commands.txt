@@ -18,6 +18,36 @@ Stage all changes in <directory> for the next commit. Replace <directory> with a
     List which files are staged, unstaged, and untracked.
 6) git remote add <name> <url>
     Create a new connection to a remote repo. After adding a remote, you can use <name> as a shortcut for <url> in other commands.
-7) git push <remote> <branch>
+7) a)git pull <remote> 
+        Fetch the specified remote’s copy of current branch and immediately merge it into the local copy.
+
+7) b) git merge <branch>
+        Merges another branch into your  active branch (e.g. master) .
+
+        In both cases, git tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts. 
+        You are responsible for merging those conflicts manually by editing the files shown by git. 
+        After changing, you need to mark them as merged with "git add <filename>"
+
+8) git push <remote> <branch>
     Push the current local branch to <remote>(name of the repo) and branch <branch>, along with necessary commits and
-    objects. Creates named branch in the remote repo if it doesn’t exist
+    objects. Creates named branch in the remote repo if it doesn’t exist.
+    A branch is not available to others unless you push the branch to your remote repository
+9) git checkout -b mybranch
+    Create a new branch named “mybranch” and switch to it . For only switching to a branch use "git checkout mybranch" 
+10) git clone (repo URL)
+    Clone a repository from GitHub and add it to the project folder:
+
+11) Not so frequently used:
+    a) git stash
+        Stash all modified and uncommited files.
+    b)git stash pop
+        Retrieve stashed files.
+
+        Use git stash when you want to record the current state of the working directory and the index, 
+        but want to go back to a clean working directory. The command saves your local modifications away 
+        and reverts the working directory to match the HEAD commit.
+
+        example: it is necessary for your work to pull, but you can not pull, as the current local changes conflict with the remote upstream. 
+        Then you stash the dirty changes and then pull, then do stash pop
+        example: you forgot something in the last commit, you need to fix that but you are already in the middle of something.
+            Then you can stash, do the change commit, then stash pop

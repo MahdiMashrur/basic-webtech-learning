@@ -51,3 +51,10 @@ Stage all changes in <directory> for the next commit. Replace <directory> with a
         Then you stash the dirty changes and then pull, then do stash pop
         example: you forgot something in the last commit, you need to fix that but you are already in the middle of something.
             Then you can stash, do the change commit, then stash pop
+
+
+    Facts:
+    *** In Git, "origin" is a shorthand name for the remote repository that a project was originally cloned from. More precisely,
+        it is used instead of that original repository's URL - and thereby makes referencing much easier.
+        eg: git remote add <name> <url> , conventionally origin is used as the <name> hence when we do "git pull <name> <branch>"
+        this means that we are pulling from a repository of this url(<name>=origin is a shorthand of url) and this branch 

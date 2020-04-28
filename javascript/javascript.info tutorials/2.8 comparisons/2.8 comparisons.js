@@ -11,7 +11,7 @@ Summary
 5 > 4 //→ true
 "apple" > "pineapple" //→ false
 "2" > "12" //→ true
-undefined == null //→ true
+undefined == null //→ true... null and undefined both have false values related to them
 undefined === null // → false
 null == "\n0\n" //→ false
 null === +"\n0\n" // → false
